@@ -1,0 +1,16 @@
+{
+  "site_title": "Suhani Rai | Full-Stack & Distributed Systems Engineer",
+  "author": "Suhani Rai",
+  "role": "Full-Stack & Distributed Systems Engineer",
+  "tagline": "Architecting high-concurrency microservices, real-time ephemeral pipelines, and resilient distributed platforms.",
+  "language": "en",
+  "theme": "dark",
+  "social": {
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "twitter": "https://twitter.com",
+    "email": "suhani.rai.dev@example.com"
+  },
+  "analytics_id": "",
+  "show_testimonials": true
+}

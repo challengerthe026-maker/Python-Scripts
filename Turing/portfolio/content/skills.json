@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "name": "Backend & Real-Time Engines",
+      "icon": "fas fa-server",
+      "skills": [
+        {"name": "Python 3.x & AsyncIO", "level": "Expert", "percent": "96", "desc": "High-throughput asynchronous event loops, typing, concurrency"},
+        {"name": "FastAPI", "level": "Expert", "percent": "95", "desc": "Pydantic validation, dependency injection, OpenAPI documentation"},
+        {"name": "WebSockets & Socket.io", "level": "Expert", "percent": "92", "desc": "Bidirectional real-time streaming, connection state management"},
+        {"name": "Node.js & Express", "level": "Advanced", "percent": "86", "desc": "RESTful services, microservice bridges, middleware pipelines"}
+      ]
+    },
+    {
+      "name": "Databases & Caching Fabric",
+      "icon": "fas fa-database",
+      "skills": [
+        {"name": "Redis & Redis Cluster", "level": "Expert", "percent": "94", "desc": "Distributed locks, ephemeral sessions, Pub/Sub, Lua scripting"},
+        {"name": "PostgreSQL", "level": "Advanced", "percent": "90", "desc": "ACID transactions, atomic state rollbacks, connection pooling"},
+        {"name": "MongoDB", "level": "Advanced", "percent": "85", "desc": "Metadata registries, flexible document aggregation, indexing"},
+        {"name": "SQLAlchemy & Alembic", "level": "Advanced", "percent": "88", "desc": "Async session engines, schema migrations, relation modeling"}
+      ]
+    },
+    {
+      "name": "Frontend & Full Stack",
+      "icon": "fas fa-laptop-code",
+      "skills": [
+        {"name": "Next.js & React", "level": "Advanced", "percent": "90", "desc": "App Router, SSR, dynamic client hydration, state management"},
+        {"name": "TypeScript", "level": "Advanced", "percent": "88", "desc": "Strict type safety, generic interfaces, API contract validation"},
+        {"name": "Tailwind CSS", "level": "Expert", "percent": "92", "desc": "Utility-first design systems, responsive UI, glassmorphism"},
+        {"name": "Modern REST & WebSocket APIs", "level": "Expert", "percent": "94", "desc": "Strict schema validation (regex pipelines), contract design"}
+      ]
+    },
+    {
+      "name": "Infrastructure & Scaling",
+      "icon": "fas fa-cloud",
+      "skills": [
+        {"name": "Docker & Microservices", "level": "Advanced", "percent": "90", "desc": "Multi-stage builds, container isolation, service networks"},
+        {"name": "Dynamic Cluster Scaling", "level": "Advanced", "percent": "86", "desc": "Elastic degradation, cluster simulation, resource quotas"},
+        {"name": "CI/CD & GitHub Actions", "level": "Advanced", "percent": "88", "desc": "Automated test suites, continuous deployment, linting pipelines"},
+        {"name": "System Observability", "level": "Advanced", "percent": "85", "desc": "Prometheus, structured logging, latency profiling"}
+      ]
+    }
+  ]
+}

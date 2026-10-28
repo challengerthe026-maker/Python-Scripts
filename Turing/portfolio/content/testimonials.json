@@ -1,0 +1,22 @@
+{
+  "testimonials": [
+    {
+      "quote": "Suhani has an uncanny mastery over distributed state management. The GlassSlipper.js architecture — especially the seamless orchestration of the Midnight Invalidation Service and atomic PostgreSQL rollbacks — is a masterclass in resilient systems design.",
+      "author": "Dr. Aris Thorne",
+      "role": "Principal Systems Architect",
+      "company": "Apex Distributed Labs"
+    },
+    {
+      "quote": "Suhani is the rare engineer who commands both full-stack clarity in Next.js and deep backend concurrency in FastAPI and Redis. Her algorithmic dynamic pricing broker was delivered with bulletproof edge-case handling.",
+      "author": "Priya Sharma",
+      "role": "Director of Engineering",
+      "company": "Velocity Data Labs"
+    },
+    {
+      "quote": "From real-time WebSockets to graceful cluster degradation simulations, Suhani’s technical leadership consistently raises the bar for performance and code reliability.",
+      "author": "Devon Miller",
+      "role": "Staff Platform Engineer",
+      "company": "CloudScale Network"
+    }
+  ]
+}

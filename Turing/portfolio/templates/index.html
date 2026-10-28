@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ site.tagline }}">
+  <meta name="author" content="{{ site.author }}">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.site_title }}">
+  <meta property="og:description" content="{{ site.tagline }}">
+
+  <title>{{ site.site_title }}</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <!-- Floating Background Ambient Light Elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">{{ profile.first_name }}<span class="accent-dot">.</span>py</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#flagship" class="nav-link">GlassSlipper.js</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="fas fa-moon moon-icon"></i>
+          <i class="fas fa-sun sun-icon"></i>
+        </button>
+
+        <!-- Resume CTA -->
+        <a href="#contact" class="btn btn-outline btn-sm nav-cta">Let's Connect</a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-indicator"></span>
+            <span>{{ profile.status_badge }}</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">{{ profile.name }}</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            <span class="static-prefix">&gt; </span>
+            <span class="typewriter" id="typewriter" data-phrases='{{ profile.typing_phrases }}'>Distributed Systems Engineer</span>
+            <span class="typewriter-cursor">|</span>
+          </h2>
+
+          <p class="hero-description">
+            {{ profile.bio_p1 }}
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#flagship" class="btn btn-primary">
+              <i class="fas fa-clock"></i> GlassSlipper.js Architecture
+            </a>
+            <a href="#projects" class="btn btn-glass">
+              <i class="fas fa-layer-group"></i> All Projects
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i> Contact Me
+            </a>
+          </div>
+
+          <div class="hero-social-links">
+            <span class="social-label">Find me on:</span>
+            <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" class="social-icon" title="Twitter / X">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="mailto:{{ site.social.email }}" class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Code Window Graphic -->
+        <div class="hero-visual">
+          <div class="code-card">
+            <div class="code-card-header">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="window-title">glass_slipper_engine.py</span>
+              <span class="file-tag">Python 3.12 + Redis</span>
+            </div>
+            <pre class="code-body"><code><span class="token-keyword">class</span> <span class="token-class">GlassSlipperEngine</span>:
+    <span class="token-keyword">def</span> <span class="token-function">__init__</span>(<span class="token-builtin">self</span>, redis_cluster, pg_pool):
+        <span class="token-builtin">self</span>.redis = redis_cluster
+        <span class="token-builtin">self</span>.db = pg_pool
+        <span class="token-builtin">self</span>.deadline = <span class="token-string">"00:00:00Z"</span>  <span class="token-comment"># Absolute Midnight</span>
+
+    <span class="token-keyword">async def</span> <span class="token-function">midnight_invalidation</span>(<span class="token-builtin">self</span>, session_id: <span class="token-builtin">str</span>):
+        <span class="token-comment"># Flushes JWTs and triggers atomic DB state rollback</span>
+        <span class="token-keyword">async with</span> <span class="token-builtin">self</span>.db.transaction():
+            <span class="token-keyword">await</span> <span class="token-builtin">self</span>.redis.delete(f<span class="token-string">"session:{session_id}"</span>)
+            <span class="token-keyword">await</span> <span class="token-builtin">self</span>.broadcast_ws(<span class="token-string">"SESSION_EXPIRED"</span>)
+            <span class="token-keyword">return</span> {<span class="token-string">"status"</span>: <span class="token-string">"ROLLED_BACK"</span>, <span class="token-string">"cluster"</span>: <span class="token-string">"Pumpkin_Single_Node"</span>}</code></pre>
+            <div class="code-card-footer">
+              <span class="terminal-badge"><i class="fas fa-check-circle"></i> Ephemeral Engine Online</span>
+              <span class="branch-tag"><i class="fas fa-code-branch"></i> main</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Ribbon -->
+    <section class="stats-ribbon">
+      <div class="container stats-grid">
+        {% for stat in profile.stats %}
+        <div class="stat-card">
+          <div class="stat-value">{{ stat.value }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Engineering Resilient, High-Concurrency Platforms</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-bio">
+            <h3 class="bio-subtitle">Translating Complex System Constraints into High-Throughput Architectures</h3>
+            <p>{{ profile.bio_p1 }}</p>
+            <p>{{ profile.bio_p2 }}</p>
+
+            <div class="about-highlights-grid">
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fas fa-bolt"></i></div>
+                <div>
+                  <h4>Real-Time Event Engines</h4>
+                  <p>Bidirectional WebSocket pipelines (Socket.io & FastAPI) streaming state across thousands of active clients.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fas fa-database"></i></div>
+                <div>
+                  <h4>Transactional Integrity</h4>
+                  <p>Atomic PostgreSQL transaction rollbacks paired with Redis Cluster ephemeral distributed caching.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fas fa-shield-alt"></i></div>
+                <div>
+                  <h4>Ruggedized Schema Pipelines</h4>
+                  <p>Strict regex verification pipelines and dynamic algorithmic pricing brokers under high concurrency.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fas fa-server"></i></div>
+                <div>
+                  <h4>Elastic Degradation</h4>
+                  <p>Dynamic cluster scaling simulating graceful degradation from distributed clusters down to single-node containers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-info-card">
+            <div class="info-card-inner">
+              <div class="avatar-wrapper">
+                <div class="avatar-placeholder">
+                  <i class="fas fa-user-astronaut"></i>
+                </div>
+              </div>
+              <h4 class="info-name">{{ profile.name }}</h4>
+              <p class="info-role">{{ site.role }}</p>
+
+              <div class="info-list">
+                <div class="info-row">
+                  <span class="info-label"><i class="fas fa-map-marker-alt"></i> Location:</span>
+                  <span class="info-value">{{ profile.location }}</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label"><i class="fas fa-envelope"></i> Email:</span>
+                  <span class="info-value"><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label"><i class="fas fa-briefcase"></i> Status:</span>
+                  <span class="info-value text-success">Open to Opportunities</span>
+                </div>
+              </div>
+
+              <div class="info-actions">
+                <a href="#contact" class="btn btn-primary btn-block">
+                  <i class="fas fa-paper-plane"></i> Get in Touch
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLAGSHIP ARCHITECTURE SPOTLIGHT: GlassSlipper.js -->
+    <section class="section flagship-section" id="flagship">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Flagship Architecture</span>
+          <h2 class="section-title">GlassSlipper.js — Real-Time Ephemeral Full-Stack Platform</h2>
+          <p class="section-subtitle">
+            A production-engineered, highly scalable full-stack application that translates the structural constraints of the Cinderella fairytale into concrete microservices.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="flagship-card">
+          <div class="flagship-top-bar">
+            <div class="flagship-status">
+              <span class="pulse-indicator"></span>
+              <strong>SYSTEM STATUS:</strong> High-Density Ephemeral Cluster Active
+            </div>
+            <div class="countdown-clock" id="session-countdown">
+              <i class="fas fa-hourglass-half fa-spin"></i> Session Expiration Timer: <span id="countdown-val">00:00:00Z</span>
+            </div>
+          </div>
+
+          <!-- Architecture Pillars Grid -->
+          <div class="flagship-pillars">
+            <!-- Pillar 1 -->
+            <div class="pillar-box">
+              <div class="pillar-header">
+                <div class="pillar-icon"><i class="fas fa-stopwatch"></i></div>
+                <div>
+                  <span class="pillar-num">Component 01</span>
+                  <h3>The Midnight Invalidation Service</h3>
+                  <span class="pillar-subtitle">Backend Engine & Rollback Orchestrator</span>
+                </div>
+              </div>
+              <ul class="pillar-features">
+                <li><i class="fas fa-check"></i> Uses a <strong>Redis-backed distributed cron scheduler</strong> to enforce absolute session expiration constraints.</li>
+                <li><i class="fas fa-check"></i> Tracks system connection state across active clients using <strong>WebSockets (FastAPI / Socket.io)</strong>.</li>
+                <li><i class="fas fa-check"></i> Instantly flushes transaction payloads and active JWTs at absolute countdown limits, triggering atomic state rollbacks in a transactional <strong>PostgreSQL</strong> layer.</li>
+              </ul>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="pillar-box">
+              <div class="pillar-header">
+                <div class="pillar-icon"><i class="fas fa-fingerprint"></i></div>
+                <div>
+                  <span class="pillar-num">Component 02</span>
+                  <h3>The Glass Slipper Fit Logic</h3>
+                  <span class="pillar-subtitle">Ruggedized Auth & Algorithmic Broker</span>
+                </div>
+              </div>
+              <ul class="pillar-features">
+                <li><i class="fas fa-check"></i> Ruggedized verification module managing strict user payload onboarding.</li>
+                <li><i class="fas fa-check"></i> Regex pattern pipeline enforcing strict string schemas (e.g., 10-digit structural mobile matching).</li>
+                <li><i class="fas fa-check"></i> Executes dynamic pricing calculations matching buyer bid matrixes against expert floor/ceiling indexes.</li>
+              </ul>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="pillar-box">
+              <div class="pillar-header">
+                <div class="pillar-icon"><i class="fas fa-cubes"></i></div>
+                <div>
+                  <span class="pillar-num">Component 03</span>
+                  <h3>The Pumpkin Cluster</h3>
+                  <span class="pillar-subtitle">Infrastructure Scale & Elastic Degradation</span>
+                </div>
+              </div>
+              <ul class="pillar-features">
+                <li><i class="fas fa-check"></i> Simulates dynamic scaling architecture under high-density burst traffic spikes.</li>
+                <li><i class="fas fa-check"></i> Demonstrates automated transformation from a high-resource multi-node cluster down to a minimalist single-node container ecosystem.</li>
+                <li><i class="fas fa-check"></i> Gracefully handles deadline threshold breaches with zero data corruption.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tech Stack Overview Ribbon -->
+          <div class="flagship-tech-bar">
+            <div class="tech-group">
+              <span class="group-label"><i class="fas fa-desktop"></i> Frontend</span>
+              <span class="group-items">Next.js · React · Tailwind CSS · TypeScript</span>
+            </div>
+            <div class="tech-group">
+              <span class="group-label"><i class="fas fa-server"></i> Backend</span>
+              <span class="group-items">Python (FastAPI) · Node.js (Express) · Redis Cluster</span>
+            </div>
+            <div class="tech-group">
+              <span class="group-label"><i class="fas fa-database"></i> Database</span>
+              <span class="group-items">PostgreSQL (Transactional Store) · MongoDB (Registry)</span>
+            </div>
+            <div class="tech-group">
+              <span class="group-label"><i class="fas fa-broadcast-tower"></i> Real-time</span>
+              <span class="group-items">WebSockets (Socket.io / FastAPI)</span>
+            </div>
+          </div>
+
+          <!-- Interactive Live API Sandbox -->
+          <div class="flagship-sandbox">
+            <div class="sandbox-nav">
+              <div class="sandbox-title"><i class="fas fa-terminal"></i> Interactive Live API Endpoint Simulator</div>
+              <div class="sandbox-tabs">
+                <button class="sandbox-tab-btn active" data-tab="tab-verify-fit">POST /api/v1/auth/verify-fit</button>
+                <button class="sandbox-tab-btn" data-tab="tab-bargain">POST /api/v1/marketplace/bargain</button>
+              </div>
+            </div>
+
+            <!-- Tab 1: verify-fit -->
+            <div class="sandbox-tab-content active" id="tab-verify-fit">
+              <div class="endpoint-meta">
+                <span class="http-badge post">POST</span>
+                <code>/api/v1/auth/verify-fit</code>
+                <span class="endpoint-desc">Validates structural schema alignment and provisions temporary ephemeral session certificates.</span>
+              </div>
+
+              <div class="sandbox-controls">
+                <div class="input-col">
+                  <label for="input-mobile">Phone / Schema Payload (10-digit regex test):</label>
+                  <input type="text" id="input-mobile" value="9876543210" placeholder="e.g. 9876543210">
+                </div>
+                <button class="btn btn-primary" id="btn-run-verify">
+                  <i class="fas fa-play"></i> Send Fit Verification Request
+                </button>
+              </div>
+
+              <pre class="json-output"><code id="code-output-verify">{
+  "status": "READY",
+  "endpoint": "POST /api/v1/auth/verify-fit",
+  "description": "Click 'Send Fit Verification Request' above to test regex matching and certificate issuance."
+}</code></pre>
+            </div>
+
+            <!-- Tab 2: bargain -->
+            <div class="sandbox-tab-content" id="tab-bargain">
+              <div class="endpoint-meta">
+                <span class="http-badge post">POST</span>
+                <code>/api/v1/marketplace/bargain</code>
+                <span class="endpoint-desc">Evaluates custom incoming bids against real-time expert indexes using a variance formula (accepts inputs within a 4% tolerance of mid-market price point or computes an automated counter-proposal).</span>
+              </div>
+
+              <div class="sandbox-controls">
+                <div class="input-col">
+                  <label for="input-bid">Mid-Market Price: <strong>$500.00</strong> (4% Tolerance Range: $480.00 – $520.00)</label>
+                  <input type="number" id="input-bid" value="485" placeholder="Enter bid in USD">
+                </div>
+                <button class="btn btn-primary" id="btn-run-bargain">
+                  <i class="fas fa-calculator"></i> Evaluate Dynamic Bid
+                </button>
+              </div>
+
+              <pre class="json-output"><code id="code-output-bargain">{
+  "status": "READY",
+  "endpoint": "POST /api/v1/marketplace/bargain",
+  "mid_market_index": 500.00,
+  "description": "Click 'Evaluate Dynamic Bid' to simulate real-time price broker calculations."
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tech Stack Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tech Stack</span>
+          <h2 class="section-title">Core Competencies & Tools</h2>
+          <p class="section-subtitle">A curated view of the core competencies I leverage to build production-grade software.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          {% for category in skills_categories %}
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="{{ category.icon }}"></i></div>
+              <h3 class="category-title">{{ category.name }}</h3>
+            </div>
+            <div class="skills-list">
+              {% for skill in category.skills %}
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">{{ skill.name }}</span>
+                  <span class="skill-badge">{{ skill.level }}</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: {{ skill.percent }}%;"></div>
+                </div>
+                <p class="skill-desc">{{ skill.desc }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">All Engineered Projects & Systems</h2>
+          <p class="section-subtitle">Real-world applications, distributed brokers, and architectures I've built.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Project Category Filters -->
+        <div class="filter-controls">
+          {% for filter in project_filters %}
+          <button class="filter-btn {% if filter_is_first %}active{% endif %}" data-filter="{{ filter }}">
+            {{ filter }}
+          </button>
+          {% endfor %}
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          {% for project in projects %}
+          <div class="project-card" data-category="{{ project.category }}" data-featured="{{ project.featured }}">
+            <div class="project-card-top">
+              <div class="project-header-row">
+                <div class="project-icon-wrapper">
+                  <i class="{{ project.icon }}"></i>
+                </div>
+                <div class="project-badge">{{ project.badge }}</div>
+              </div>
+              <h3 class="project-title">{{ project.title }}</h3>
+              <p class="project-short-desc">{{ project.short_description }}</p>
+              <p class="project-full-desc">{{ project.description }}</p>
+            </div>
+
+            <div class="project-highlights">
+              <div class="highlights-heading">Key Highlights:</div>
+              <ul>
+                {% for highlight in project.highlights %}
+                <li>{{ highlight }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+
+            <div class="project-card-bottom">
+              <div class="project-tags">
+                {% for tag in project.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+
+              <div class="project-actions">
+                <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass" title="View Source Code">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" title="Launch Demo">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience & Education Section -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Career Journey</span>
+          <h2 class="section-title">Experience & Education</h2>
+          <p class="section-subtitle">My professional track record building backend infrastructure and software products.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="experience-layout">
+          <!-- Work Experience Column -->
+          <div class="timeline-column">
+            <h3 class="timeline-column-title"><i class="fas fa-briefcase"></i> Work Experience</h3>
+            <div class="timeline">
+              {% for job in experience %}
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <span class="timeline-period">{{ job.period }}</span>
+                    <span class="timeline-location"><i class="fas fa-map-pin"></i> {{ job.location }}</span>
+                  </div>
+                  <h4 class="timeline-role">{{ job.role }}</h4>
+                  <div class="timeline-company">{{ job.company }}</div>
+                  <p class="timeline-desc">{{ job.description }}</p>
+                  <ul class="timeline-achievements">
+                    {% for item in job.achievements %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                  </ul>
+                  <div class="timeline-tech-tags">
+                    {% for tech in job.technologies %}
+                    <span class="tech-tag">{{ tech }}</span>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <!-- Education Column -->
+          <div class="timeline-column">
+            <h3 class="timeline-column-title"><i class="fas fa-graduation-cap"></i> Education & Foundation</h3>
+            <div class="timeline">
+              {% for edu in education %}
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-period">{{ edu.period }}</span>
+                  <h4 class="timeline-role">{{ edu.degree }}</h4>
+                  <div class="timeline-company">{{ edu.institution }}</div>
+                  <p class="timeline-desc">{{ edu.details }}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+
+            <!-- Developer Philosophy Card -->
+            <div class="philosophy-card">
+              <div class="philosophy-icon"><i class="fas fa-terminal"></i></div>
+              <h4>Principles of Resilient Ephemeral Systems</h4>
+              <p class="quote-text">"Design for inevitable expiration. Enforce strict boundaries at the gate, synchronize state via real-time events, and guarantee atomic rollbacks when the clock strikes midnight."</p>
+              <div class="quote-author">— Suhani Rai</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    {% if site.show_testimonials %}
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Endorsements</span>
+          <h2 class="section-title">What Architects & Leaders Say</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="testimonials-grid">
+          {% for t in testimonials %}
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-quote">{{ t.quote }}</p>
+            <div class="testimonial-author-row">
+              <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+              <div>
+                <div class="author-name">{{ t.author }}</div>
+                <div class="author-title">{{ t.role }} · <span class="author-company">{{ t.company }}</span></div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Connect</span>
+          <h2 class="section-title">Let's Build Something Great Together</h2>
+          <p class="section-subtitle">Interested in distributed architectures, real-time microservices, or consulting? Drop me a line!</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Contact Cards -->
+          <div class="contact-info-panel">
+            <h3>Get In Touch</h3>
+            <p>I typically respond within 24 hours. Feel free to contact me via email or through the form.</p>
+
+            <div class="contact-card-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-details">
+                <span class="label">Direct Email</span>
+                <a href="mailto:{{ profile.email }}" class="value">{{ profile.email }}</a>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-details">
+                <span class="label">Location</span>
+                <span class="value">{{ profile.location }}</span>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon"><i class="fab fa-github"></i></div>
+              <div class="contact-details">
+                <span class="label">Open Source</span>
+                <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" class="value">GitHub Profile</a>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+              <div class="contact-details">
+                <span class="label">Professional Network</span>
+                <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="value">LinkedIn Profile</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-panel">
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name <span class="required">*</span></label>
+                  <input type="text" id="name" name="name" placeholder="Grace Hopper" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="grace@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject / Inquiry Type <span class="required">*</span></label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select an option...</option>
+                  <option value="Full-Time Engineering Role">Full-Time Engineering Role</option>
+                  <option value="Distributed Systems Consulting">Distributed Systems Architecture Consulting</option>
+                  <option value="Open Source Collaboration">Open Source Collaboration</option>
+                  <option value="Just Saying Hi">Just Saying Hi</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your system requirements, architecture, or timeline..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                <span class="btn-spinner hidden"><i class="fas fa-circle-notch fa-spin"></i> Sending...</span>
+              </button>
+
+              <div id="form-alert" class="form-alert hidden"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="logo-symbol">&lt;/&gt;</span>
+          <span class="logo-text">{{ profile.first_name }}<span class="accent-dot">.</span>py</span>
+        </a>
+        <p class="footer-tagline">{{ site.tagline }}</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#flagship">GlassSlipper.js</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="mailto:{{ site.social.email }}" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>© {{ current_year }} {{ profile.name }}. All rights reserved.</p>
+        <p class="built-with">
+          Built with <span class="heart">♥</span> using pure <strong>Python</strong> static site generator.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Scroll to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="static/js/main.js"></script>
+</body>
+</html>

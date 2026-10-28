@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Building scalable web services, automated pipelines, and intelligent AI tools.">
+  <meta name="author" content="Alex Morgan">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alex Morgan | Python Developer & Software Engineer">
+  <meta property="og:description" content="Building scalable web services, automated pipelines, and intelligent AI tools.">
+
+  <title>Alex Morgan | Python Developer & Software Engineer</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <!-- Floating Background Ambient Light Elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Alex<span class="accent-dot">.</span>py</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="fas fa-moon moon-icon"></i>
+          <i class="fas fa-sun sun-icon"></i>
+        </button>
+
+        <!-- Resume CTA -->
+        <a href="#contact" class="btn btn-outline btn-sm nav-cta">Let's Talk</a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-indicator"></span>
+            <span>Available for new projects & full-time roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Alex Morgan</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            <span class="static-prefix">&gt; </span>
+            <span class="typewriter" id="typewriter" data-phrases='['Python & FastAPI Architect', 'Data Pipeline & Automation Engineer', 'Cloud & Distributed Systems Specialist', 'Open Source Contributor']'>Python Developer</span>
+            <span class="typewriter-cursor">|</span>
+          </h2>
+
+          <p class="hero-description">
+            I am a software engineer with 4+ years of experience specializing in Python, distributed backend architectures, and high-performance APIs. I focus on writing clean, readable, and battle-tested code that scales seamlessly under load.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-folder-open"></i> Explore Projects
+            </a>
+            <a href="#contact" class="btn btn-glass">
+              <i class="fas fa-envelope"></i> Get In Touch
+            </a>
+          </div>
+
+          <div class="hero-social-links">
+            <span class="social-label">Find me on:</span>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Twitter / X">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="mailto:alex.morgan.dev@example.com" class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Code Window Graphic -->
+        <div class="hero-visual">
+          <div class="code-card">
+            <div class="code-card-header">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="window-title">developer.py</span>
+              <span class="file-tag">Python 3.12</span>
+            </div>
+            <pre class="code-body"><code><span class="token-keyword">class</span> <span class="token-class">Developer</span>:
+    <span class="token-keyword">def</span> <span class="token-function">__init__</span>(<span class="token-builtin">self</span>):
+        <span class="token-builtin">self</span>.name = <span class="token-string">'Alex Morgan'</span>
+        <span class="token-builtin">self</span>.role = <span class="token-string">'Full Stack Python Developer'</span>
+        <span class="token-builtin">self</span>.stack = [<span class="token-string">'Python'</span>, <span class="token-string">'FastAPI'</span>, <span class="token-string">'Postgres'</span>, <span class="token-string">'Docker'</span>]
+        <span class="token-builtin">self</span>.open_for_hire = <span class="token-keyword">True</span>
+
+    <span class="token-keyword">def</span> <span class="token-function">build_solution</span>(<span class="token-builtin">self</span>, problem: <span class="token-builtin">str</span>):
+        <span class="token-comment"># Transforms complex challenges into robust code</span>
+        <span class="token-keyword">return</span> f<span class="token-string">"✨ Shipped 10x scalable backend!"</span>
+
+dev = <span class="token-class">Developer</span>()
+<span class="token-builtin">print</span>(dev.build_solution(<span class="token-string">"High throughput system"</span>))</code></pre>
+            <div class="code-card-footer">
+              <span class="terminal-badge"><i class="fas fa-check-circle"></i> Compiled & ready</span>
+              <span class="branch-tag"><i class="fas fa-code-branch"></i> main</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Ribbon -->
+    <section class="stats-ribbon">
+      <div class="container stats-grid">
+        
+        <div class="stat-card">
+          <div class="stat-value">4+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-value">25+</div>
+          <div class="stat-label">Projects Shipped</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-value">99.9%</div>
+          <div class="stat-label">Uptime Reliability</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-value">1.2k+</div>
+          <div class="stat-label">GitHub Stars</div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Driven by Clean Architecture & Scalability</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-bio">
+            <h3 class="bio-subtitle">Engineering Robust Solutions From Data to Deployment</h3>
+            <p>I am a software engineer with 4+ years of experience specializing in Python, distributed backend architectures, and high-performance APIs. I focus on writing clean, readable, and battle-tested code that scales seamlessly under load.</p>
+            <p>Beyond backend services, I design end-to-end data workflows, integrate modern LLM/AI APIs into production systems, and build automated tooling that saves engineering teams hundreds of hours.</p>
+
+            <div class="about-highlights-grid">
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fas fa-bolt"></i></div>
+                <div>
+                  <h4>High-Throughput APIs</h4>
+                  <p>FastAPI & AsyncIO architectures capable of handling tens of thousands of requests per second.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fas fa-layer-group"></i></div>
+                <div>
+                  <h4>Distributed Systems</h4>
+                  <p>Message queues, Redis caching layers, and database partitioning for resilient microservices.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fas fa-robot"></i></div>
+                <div>
+                  <h4>AI & LLM Integration</h4>
+                  <p>Production RAG pipelines, vector databases, and semantic search powered by state-of-the-art models.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fas fa-vial-circle-check"></i></div>
+                <div>
+                  <h4>Robust Code Quality</h4>
+                  <p>Type hints, comprehensive Pytest coverage, automated CI/CD pipelines, and clean documentation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-info-card">
+            <div class="info-card-inner">
+              <div class="avatar-wrapper">
+                <div class="avatar-placeholder">
+                  <i class="fas fa-user-astronaut"></i>
+                </div>
+              </div>
+              <h4 class="info-name">Alex Morgan</h4>
+              <p class="info-role">Full Stack Python Developer</p>
+
+              <div class="info-list">
+                <div class="info-row">
+                  <span class="info-label"><i class="fas fa-map-marker-alt"></i> Location:</span>
+                  <span class="info-value">San Francisco, CA (or Remote)</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label"><i class="fas fa-envelope"></i> Email:</span>
+                  <span class="info-value"><a href="mailto:alex.morgan.dev@example.com">alex.morgan.dev@example.com</a></span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label"><i class="fas fa-briefcase"></i> Status:</span>
+                  <span class="info-value text-success">Open to Opportunities</span>
+                </div>
+              </div>
+
+              <div class="info-actions">
+                <a href="#contact" class="btn btn-primary btn-block">
+                  <i class="fas fa-paper-plane"></i> Contact Me
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tech Stack Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tech Stack</span>
+          <h2 class="section-title">Tools, Languages & Technologies</h2>
+          <p class="section-subtitle">A curated view of the core competencies I leverage to build production-grade software.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="fas fa-server"></i></div>
+              <h3 class="category-title">Backend & Core</h3>
+            </div>
+            <div class="skills-list">
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Python 3.x</span>
+                  <span class="skill-badge">Expert</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 95%;"></div>
+                </div>
+                <p class="skill-desc">AsyncIO, Typing, Metaclasses, Pytest</p>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">FastAPI</span>
+                  <span class="skill-badge">Expert</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 92%;"></div>
+                </div>
+                <p class="skill-desc">Pydantic, Dependency Injection, OpenAPI specs</p>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Django / DRF</span>
+                  <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 88%;"></div>
+                </div>
+                <p class="skill-desc">ORM, Celery tasks, Authentication</p>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Flask</span>
+                  <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 85%;"></div>
+                </div>
+                <p class="skill-desc">Microservices, Extensions, REST APIs</p>
+              </div>
+              
+            </div>
+          </div>
+          
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="fas fa-database"></i></div>
+              <h3 class="category-title">Databases & Caching</h3>
+            </div>
+            <div class="skills-list">
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">PostgreSQL</span>
+                  <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 90%;"></div>
+                </div>
+                <p class="skill-desc">Indexing, Query Optimization, Alembic migrations</p>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Redis</span>
+                  <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 88%;"></div>
+                </div>
+                <p class="skill-desc">Pub/Sub, Caching layers, Rate limiting</p>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">SQLAlchemy</span>
+                  <span class="skill-badge">Expert</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 92%;"></div>
+                </div>
+                <p class="skill-desc">Core & ORM, Async Sessions, Pooling</p>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">MongoDB</span>
+                  <span class="skill-badge">Intermediate</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 78%;"></div>
+                </div>
+                <p class="skill-desc">Document modeling, Aggregation pipelines</p>
+              </div>
+              
+            </div>
+          </div>
+          
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="fas fa-cloud"></i></div>
+              <h3 class="category-title">Cloud & DevOps</h3>
+            </div>
+            <div class="skills-list">
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Docker & Compose</span>
+                  <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 90%;"></div>
+                </div>
+                <p class="skill-desc">Multi-stage builds, Container orchestration</p>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">AWS</span>
+                  <span class="skill-badge">Intermediate</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 82%;"></div>
+                </div>
+                <p class="skill-desc">ECS, S3, Lambda, CloudWatch, RDS</p>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">CI/CD & GitHub Actions</span>
+                  <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 88%;"></div>
+                </div>
+                <p class="skill-desc">Automated testing, Linting, Automated releases</p>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Linux & Bash</span>
+                  <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 85%;"></div>
+                </div>
+                <p class="skill-desc">Server configuration, Systemd, Shell automation</p>
+              </div>
+              
+            </div>
+          </div>
+          
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="fas fa-microchip"></i></div>
+              <h3 class="category-title">AI, Data & Frontend</h3>
+            </div>
+            <div class="skills-list">
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">LLM & OpenAI / Gemini APIs</span>
+                  <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 86%;"></div>
+                </div>
+                <p class="skill-desc">Tool calling, Embeddings, RAG workflows</p>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Pandas & NumPy</span>
+                  <span class="skill-badge">Intermediate</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 80%;"></div>
+                </div>
+                <p class="skill-desc">Data cleaning, Analysis, ETL pipelines</p>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Modern HTML5 & CSS3</span>
+                  <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 85%;"></div>
+                </div>
+                <p class="skill-desc">Responsive design, Flexbox, CSS Grid</p>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">JavaScript (ES6+)</span>
+                  <span class="skill-badge">Intermediate</span>
+                </div>
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar" style="width: 78%;"></div>
+                </div>
+                <p class="skill-desc">DOM manipulation, Fetch API, Async/Await</p>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Featured Projects & Case Studies</h2>
+          <p class="section-subtitle">Real-world applications, open-source utilities, and architectures I've built.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Project Category Filters -->
+        <div class="filter-controls">
+          
+          <button class="filter-btn active" data-filter="All">
+            All
+          </button>
+          
+          <button class="filter-btn " data-filter="Backend & APIs">
+            Backend & APIs
+          </button>
+          
+          <button class="filter-btn " data-filter="AI & ML">
+            AI & ML
+          </button>
+          
+          <button class="filter-btn " data-filter="Tools & Automation">
+            Tools & Automation
+          </button>
+          
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          
+          <div class="project-card" data-category="AI & ML" data-featured="True">
+            <div class="project-card-top">
+              <div class="project-header-row">
+                <div class="project-icon-wrapper">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <div class="project-badge">Featured AI Project</div>
+              </div>
+              <h3 class="project-title">NeuralDoc: Semantic Search & RAG Engine</h3>
+              <p class="project-short-desc">A high-performance semantic document search engine using Python, vector embeddings, and FastAPI.</p>
+              <p class="project-full-desc">Engineered an enterprise semantic search system that indexes multi-format PDFs and technical documentation. Features hybrid dense-sparse vector search, token chunking optimization, and automatic citation synthesis using LLMs.</p>
+            </div>
+
+            <div class="project-highlights">
+              <div class="highlights-heading">Key Highlights:</div>
+              <ul>
+                
+                <li>Processes 10,000+ technical docs with sub-50ms query latency</li>
+                
+                <li>Hybrid reranking pipeline blending BM25 and cosine vector similarity</li>
+                
+                <li>Asynchronous ingestion queue backed by Celery and Redis</li>
+                
+              </ul>
+            </div>
+
+            <div class="project-card-bottom">
+              <div class="project-tags">
+                
+                <span class="tag">Python</span>
+                
+                <span class="tag">FastAPI</span>
+                
+                <span class="tag">Qdrant</span>
+                
+                <span class="tag">Sentence-Transformers</span>
+                
+                <span class="tag">Docker</span>
+                
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass" title="View Source Code">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://demo.example.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" title="Launch Demo">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="Backend & APIs" data-featured="True">
+            <div class="project-card-top">
+              <div class="project-header-row">
+                <div class="project-icon-wrapper">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <div class="project-badge">High Concurrency</div>
+              </div>
+              <h3 class="project-title">Apex: Distributed Rate Limiting Microservice</h3>
+              <p class="project-short-desc">Scalable token-bucket & sliding-window rate limiting engine with sub-millisecond Redis clustering.</p>
+              <p class="project-full-desc">Designed a standalone distributed rate limiter for API gateways. Implements atomic Lua scripts inside Redis clusters to protect downstream microservices against spikes and DDoS attacks.</p>
+            </div>
+
+            <div class="project-highlights">
+              <div class="highlights-heading">Key Highlights:</div>
+              <ul>
+                
+                <li>Tested to sustain 45,000 requests/sec with p99 latency under 1.8ms</li>
+                
+                <li>Includes Prometheus metrics and Grafana live dashboard templates</li>
+                
+                <li>Drop-in Python client SDK with intelligent exponential backoff</li>
+                
+              </ul>
+            </div>
+
+            <div class="project-card-bottom">
+              <div class="project-tags">
+                
+                <span class="tag">Python 3.12</span>
+                
+                <span class="tag">AsyncIO</span>
+                
+                <span class="tag">Redis</span>
+                
+                <span class="tag">Lua</span>
+                
+                <span class="tag">Prometheus</span>
+                
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass" title="View Source Code">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://demo.example.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" title="Launch Demo">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="Tools & Automation" data-featured="False">
+            <div class="project-card-top">
+              <div class="project-header-row">
+                <div class="project-icon-wrapper">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <div class="project-badge">Open Source</div>
+              </div>
+              <h3 class="project-title">PyForge: Zero-Dependency Static Generator</h3>
+              <p class="project-short-desc">Lightweight, blazing-fast static site builder powered exclusively by the Python Standard Library.</p>
+              <p class="project-full-desc">Created a developer-first static site generator with zero external pip dependencies. Includes a custom template parser, live preview server, and GitHub Pages deployment workflow.</p>
+            </div>
+
+            <div class="project-highlights">
+              <div class="highlights-heading">Key Highlights:</div>
+              <ul>
+                
+                <li>Zero pip dependencies required — runs out-of-the-box on standard Python 3</li>
+                
+                <li>Compiles complex responsive sites in under 50 milliseconds</li>
+                
+                <li>Built-in file watching and live-reload HTTP server</li>
+                
+              </ul>
+            </div>
+
+            <div class="project-card-bottom">
+              <div class="project-tags">
+                
+                <span class="tag">Python</span>
+                
+                <span class="tag">Template Engine</span>
+                
+                <span class="tag">CLI</span>
+                
+                <span class="tag">Zero-Dependency</span>
+                
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass" title="View Source Code">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://demo.example.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" title="Launch Demo">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="Backend & APIs" data-featured="False">
+            <div class="project-card-top">
+              <div class="project-header-row">
+                <div class="project-icon-wrapper">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="project-badge">Streaming</div>
+              </div>
+              <h3 class="project-title">Sentinel: Real-time Orderbook & Event Pipeline</h3>
+              <p class="project-short-desc">Asynchronous WebSocket pipeline streaming financial orderbook depth data into timeseries databases.</p>
+              <p class="project-full-desc">Event-driven system consuming level-2 market depth feeds across major crypto exchanges. Normalizes high-throughput trade feeds and calculates real-time volatility indices.</p>
+            </div>
+
+            <div class="project-highlights">
+              <div class="highlights-heading">Key Highlights:</div>
+              <ul>
+                
+                <li>Ingests 50,000+ ticks/sec with zero memory leaks</li>
+                
+                <li>Fault-tolerant auto-reconnect WebSocket connection pool</li>
+                
+                <li>Automatic anomaly alerts sent via Webhook and Telegram bot</li>
+                
+              </ul>
+            </div>
+
+            <div class="project-card-bottom">
+              <div class="project-tags">
+                
+                <span class="tag">Python</span>
+                
+                <span class="tag">WebSockets</span>
+                
+                <span class="tag">TimescaleDB</span>
+                
+                <span class="tag">AIOKafka</span>
+                
+                <span class="tag">Docker</span>
+                
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass" title="View Source Code">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://demo.example.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" title="Launch Demo">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="Tools & Automation" data-featured="False">
+            <div class="project-card-top">
+              <div class="project-header-row">
+                <div class="project-icon-wrapper">
+                  <i class="fas fa-terminal"></i>
+                </div>
+                <div class="project-badge">Productivity</div>
+              </div>
+              <h3 class="project-title">CloudSync CLI: Multi-Cloud Backup Automation</h3>
+              <p class="project-short-desc">Intelligent command-line tool for differential encrypted backups across AWS S3 and local storage.</p>
+              <p class="project-full-desc">A cross-platform CLI tool built with Python's Argparse and Cryptography. Detects modified binary chunks to perform fast incremental uploads with client-side AES-GCM encryption.</p>
+            </div>
+
+            <div class="project-highlights">
+              <div class="highlights-heading">Key Highlights:</div>
+              <ul>
+                
+                <li>Chunk-level deduplication reduces upload bandwidth by 65%</li>
+                
+                <li>Multiprocessing worker pool maximizes network throughput</li>
+                
+                <li>Automated cron-ready scheduling and error alerting</li>
+                
+              </ul>
+            </div>
+
+            <div class="project-card-bottom">
+              <div class="project-tags">
+                
+                <span class="tag">Python</span>
+                
+                <span class="tag">CLI</span>
+                
+                <span class="tag">AWS S3</span>
+                
+                <span class="tag">Cryptography</span>
+                
+                <span class="tag">Multiprocessing</span>
+                
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass" title="View Source Code">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://demo.example.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" title="Launch Demo">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="AI & ML" data-featured="False">
+            <div class="project-card-top">
+              <div class="project-header-row">
+                <div class="project-icon-wrapper">
+                  <i class="fas fa-images"></i>
+                </div>
+                <div class="project-badge">Computer Vision</div>
+              </div>
+              <h3 class="project-title">VisionCraft: Automated Image Annotation Service</h3>
+              <p class="project-short-desc">Async microservice generating multimodal descriptions, tags, and embeddings for visual assets.</p>
+              <p class="project-full-desc">Microservice enabling media asset managers to ingest thousands of photos and generate automated taxonomy tags, color palettes, and accessibility captions using local vision models.</p>
+            </div>
+
+            <div class="project-highlights">
+              <div class="highlights-heading">Key Highlights:</div>
+              <ul>
+                
+                <li>Batch processes 1,000 images in under 3 minutes with GPU acceleration</li>
+                
+                <li>Generates accessibility-compliant WCAG alt-text automatically</li>
+                
+                <li>Clean REST API with webhook callbacks upon processing completion</li>
+                
+              </ul>
+            </div>
+
+            <div class="project-card-bottom">
+              <div class="project-tags">
+                
+                <span class="tag">Python</span>
+                
+                <span class="tag">FastAPI</span>
+                
+                <span class="tag">PyTorch</span>
+                
+                <span class="tag">Pillow</span>
+                
+                <span class="tag">Celery</span>
+                
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass" title="View Source Code">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://demo.example.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" title="Launch Demo">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience & Education Section -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Career Journey</span>
+          <h2 class="section-title">Experience & Education</h2>
+          <p class="section-subtitle">My professional track record building backend infrastructure and software products.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="experience-layout">
+          <!-- Work Experience Column -->
+          <div class="timeline-column">
+            <h3 class="timeline-column-title"><i class="fas fa-briefcase"></i> Work Experience</h3>
+            <div class="timeline">
+              
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <span class="timeline-period">2023 - Present</span>
+                    <span class="timeline-location"><i class="fas fa-map-pin"></i> San Francisco, CA (Remote)</span>
+                  </div>
+                  <h4 class="timeline-role">Senior Python Backend Engineer</h4>
+                  <div class="timeline-company">Vanguard Tech Solutions</div>
+                  <p class="timeline-desc">Architected high-throughput microservices and data pipelines servicing over 2 million monthly active users.</p>
+                  <ul class="timeline-achievements">
+                    
+                    <li>Re-engineered core ingestion pipeline using Python AsyncIO & Redis, slashing p95 latency by 45%</li>
+                    
+                    <li>Led migration from monolithic Django app to modular FastAPI microservices with OpenAPI documentation</li>
+                    
+                    <li>Mentored 6 junior/mid-level engineers in test-driven development, type annotations, and CI/CD best practices</li>
+                    
+                  </ul>
+                  <div class="timeline-tech-tags">
+                    
+                    <span class="tech-tag">Python</span>
+                    
+                    <span class="tech-tag">FastAPI</span>
+                    
+                    <span class="tech-tag">PostgreSQL</span>
+                    
+                    <span class="tech-tag">Docker</span>
+                    
+                    <span class="tech-tag">Redis</span>
+                    
+                    <span class="tech-tag">AWS</span>
+                    
+                  </div>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <span class="timeline-period">2021 - 2023</span>
+                    <span class="timeline-location"><i class="fas fa-map-pin"></i> San Jose, CA</span>
+                  </div>
+                  <h4 class="timeline-role">Python Software Engineer</h4>
+                  <div class="timeline-company">DataPulse Analytics</div>
+                  <p class="timeline-desc">Designed automated ETL pipelines and analytics REST APIs for enterprise marketing intelligence.</p>
+                  <ul class="timeline-achievements">
+                    
+                    <li>Constructed automated Celery workflows processing 50M+ rows of tabular data daily with 99.98% reliability</li>
+                    
+                    <li>Built database indexing strategies and query optimizations that cut query execution times from 4.2s to 180ms</li>
+                    
+                    <li>Integrated third-party OAuth2 integrations (Google, Salesforce, HubSpot) with automated token rotation</li>
+                    
+                  </ul>
+                  <div class="timeline-tech-tags">
+                    
+                    <span class="tech-tag">Python</span>
+                    
+                    <span class="tech-tag">Django REST</span>
+                    
+                    <span class="tech-tag">PostgreSQL</span>
+                    
+                    <span class="tech-tag">Celery</span>
+                    
+                    <span class="tech-tag">Pandas</span>
+                    
+                    <span class="tech-tag">Docker</span>
+                    
+                  </div>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <span class="timeline-period">2020 - 2021</span>
+                    <span class="timeline-location"><i class="fas fa-map-pin"></i> Austin, TX</span>
+                  </div>
+                  <h4 class="timeline-role">Software Developer Intern</h4>
+                  <div class="timeline-company">Nexus Software Labs</div>
+                  <p class="timeline-desc">Developed internal automation tools, automated test suites, and REST API documentation.</p>
+                  <ul class="timeline-achievements">
+                    
+                    <li>Created an internal CLI tool in Python to automate database seeding and staging environment deploys</li>
+                    
+                    <li>Increased test coverage from 62% to 89% using Pytest and Mock libraries across 4 repositories</li>
+                    
+                  </ul>
+                  <div class="timeline-tech-tags">
+                    
+                    <span class="tech-tag">Python</span>
+                    
+                    <span class="tech-tag">Pytest</span>
+                    
+                    <span class="tech-tag">Flask</span>
+                    
+                    <span class="tech-tag">SQLite</span>
+                    
+                    <span class="tech-tag">Git</span>
+                    
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- Education Column -->
+          <div class="timeline-column">
+            <h3 class="timeline-column-title"><i class="fas fa-graduation-cap"></i> Education & Foundation</h3>
+            <div class="timeline">
+              
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-period">2016 - 2020</span>
+                  <h4 class="timeline-role">B.S. in Computer Science</h4>
+                  <div class="timeline-company">University of California, Berkeley</div>
+                  <p class="timeline-desc">Focus on Distributed Systems, Algorithms & Data Structures, and Database Management. Dean's Honor List.</p>
+                </div>
+              </div>
+              
+            </div>
+
+            <!-- Developer Philosophy Card -->
+            <div class="philosophy-card">
+              <div class="philosophy-icon"><i class="fas fa-terminal"></i></div>
+              <h4>The Zen of Python in Practice</h4>
+              <p class="quote-text">"Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex. Readability counts."</p>
+              <div class="quote-author">— PEP 20 (The Zen of Python)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Endorsements</span>
+          <h2 class="section-title">What Colleagues & Leaders Say</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="testimonials-grid">
+          
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-quote">Alex is one of the most proficient Python developers I've collaborated with. Their ability to decompose complex concurrency bottlenecks and turn them into elegant, maintainable code is world-class.</p>
+            <div class="testimonial-author-row">
+              <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+              <div>
+                <div class="author-name">Elena Rostova</div>
+                <div class="author-title">VP of Engineering · <span class="author-company">Vanguard Tech Solutions</span></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-quote">Not only did Alex deliver our FastAPI microservice weeks ahead of schedule, but the documentation, automated test suite, and CI/CD pipelines made maintenance an absolute breeze.</p>
+            <div class="testimonial-author-row">
+              <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+              <div>
+                <div class="author-name">Marcus Brody</div>
+                <div class="author-title">Lead Architect · <span class="author-company">DataPulse Analytics</span></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-quote">A thoughtful problem solver with exceptional communication. Alex doesn't just write great Python code — they deeply understand business goals and user impact.</p>
+            <div class="testimonial-author-row">
+              <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+              <div>
+                <div class="author-name">Sarah Lin</div>
+                <div class="author-title">Product Director · <span class="author-company">Nexus Systems</span></div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Connect</span>
+          <h2 class="section-title">Let's Build Something Great Together</h2>
+          <p class="section-subtitle">Have an exciting opportunity, a contract role, or an architectural challenge? Drop me a message!</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Contact Cards -->
+          <div class="contact-info-panel">
+            <h3>Get In Touch</h3>
+            <p>I typically respond within 24 hours. Feel free to contact me via email or through the form.</p>
+
+            <div class="contact-card-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-details">
+                <span class="label">Direct Email</span>
+                <a href="mailto:alex.morgan.dev@example.com" class="value">alex.morgan.dev@example.com</a>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-details">
+                <span class="label">Location</span>
+                <span class="value">San Francisco, CA (or Remote)</span>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon"><i class="fab fa-github"></i></div>
+              <div class="contact-details">
+                <span class="label">Open Source</span>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="value">GitHub Profile</a>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+              <div class="contact-details">
+                <span class="label">Professional Network</span>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="value">LinkedIn Profile</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-panel">
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name <span class="required">*</span></label>
+                  <input type="text" id="name" name="name" placeholder="Ada Lovelace" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="ada@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject / Inquiry Type <span class="required">*</span></label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select an option...</option>
+                  <option value="Full-Time Role">Full-Time Software Engineer Role</option>
+                  <option value="Consulting / Freelance">Architecture / Contract Project</option>
+                  <option value="Open Source Collaboration">Open Source Collaboration</option>
+                  <option value="Just Saying Hi">Just Saying Hi</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, timeline, and stack requirements..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                <span class="btn-spinner hidden"><i class="fas fa-circle-notch fa-spin"></i> Sending...</span>
+              </button>
+
+              <div id="form-alert" class="form-alert hidden"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="logo-symbol">&lt;/&gt;</span>
+          <span class="logo-text">Alex<span class="accent-dot">.</span>py</span>
+        </a>
+        <p class="footer-tagline">Building scalable web services, automated pipelines, and intelligent AI tools.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="mailto:alex.morgan.dev@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>© 2026 Alex Morgan. All rights reserved.</p>
+        <p class="built-with">
+          Built with <span class="heart">♥</span> using pure <strong>Python</strong> static site generator.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Scroll to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="static/js/main.js"></script>
+</body>
+</html>

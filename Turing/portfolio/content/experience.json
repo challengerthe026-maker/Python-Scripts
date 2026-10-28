@@ -1,0 +1,50 @@
+{
+  "work": [
+    {
+      "role": "Distributed Systems & Full-Stack Engineer",
+      "company": "SlipperCore / Apex Systems",
+      "location": "Bengaluru (Remote)",
+      "period": "2023 - Present",
+      "description": "Architect of high-density real-time microservices, dynamic algorithmic brokers, and ephemeral session managers.",
+      "achievements": [
+        "Engineered the GlassSlipper.js platform: managed ephemeral session invalidations via Redis-backed distributed cron and atomic PostgreSQL rollbacks",
+        "Constructed the Dynamic Pricing Broker evaluating incoming market bids against real-time expert indexes with a 4% variance tolerance",
+        "Simulated cluster auto-scaling behavior transitioning seamlessly from high-resource multi-node clusters down to single-node container states upon deadline breaches"
+      ],
+      "technologies": ["Python", "FastAPI", "Redis Cluster", "Next.js", "TypeScript", "PostgreSQL", "WebSockets"]
+    },
+    {
+      "role": "Full-Stack Software Engineer",
+      "company": "Velocity Data Labs",
+      "location": "Bengaluru, India",
+      "period": "2021 - 2023",
+      "description": "Built event-driven microservices, real-time WebSocket communication pipelines, and resilient API gateways.",
+      "achievements": [
+        "Implemented real-time bidirectional WebSocket synchronization layer supporting over 15,000 active concurrent connections",
+        "Designed regex validation and schema pipelines ensuring 100% compliant data onboarding and automated token rotation",
+        "Optimized PostgreSQL connection pools and Redis caching, cutting p95 query response time from 320ms to 24ms"
+      ],
+      "technologies": ["Python", "FastAPI", "React", "PostgreSQL", "Redis", "Docker", "Tailwind CSS"]
+    },
+    {
+      "role": "Software Engineering Fellow",
+      "company": "Turing Tech Innovations",
+      "location": "Bengaluru, India",
+      "period": "2020 - 2021",
+      "description": "Developed internal automation tooling, performance test harnesses, and microservice benchmarks.",
+      "achievements": [
+        "Created an automated load-testing suite in Python simulating burst traffic spikes across REST and WebSocket endpoints",
+        "Achieved 92% unit and integration test coverage across all core backend services using Pytest"
+      ],
+      "technologies": ["Python", "AsyncIO", "Pytest", "Node.js", "Git", "Linux"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Tech in Computer Science & Engineering",
+      "institution": "National Institute of Technology",
+      "period": "2017 - 2021",
+      "details": "Specialization in Distributed Computing, Operating Systems, Database Internals, and Computer Networks."
+    }
+  ]
+}

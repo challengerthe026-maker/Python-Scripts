@@ -1,0 +1,115 @@
+{
+  "filters": ["All", "Real-Time & Ephemeral", "Distributed Systems", "Full Stack"],
+  "projects": [
+    {
+      "id": "glass-slipper",
+      "title": "GlassSlipper.js — Real-Time Ephemeral Full-Stack Platform",
+      "category": "Real-Time & Ephemeral",
+      "featured": true,
+      "badge": "Flagship Platform",
+      "short_description": "Production-engineered full-stack platform translating Cinderella fairytale constraints into concrete microservices.",
+      "description": "Architected a high-density real-time distributed platform balancing strict ephemeral session lifetimes, high-density traffic spikes, and dynamic algorithmic match brokerage. Implements the Midnight Invalidation Service, Glass Slipper Fit Logic, and the Pumpkin Cluster scaling simulation.",
+      "tags": ["Python (FastAPI)", "Redis Cluster", "PostgreSQL", "Next.js", "TypeScript", "WebSockets", "MongoDB", "Docker"],
+      "github": "https://github.com",
+      "demo": "https://glass-slipper.example.com",
+      "highlights": [
+        "Midnight Invalidation Engine: Redis-backed distributed cron flushes active JWTs at absolute deadlines, triggering atomic PostgreSQL state rollbacks",
+        "Glass Slipper Fit Logic: Regex verification pipeline enforcing strict schemas (e.g. 10-digit mobile matching) and issuing ephemeral certificates",
+        "Dynamic Pricing Broker (POST /api/v1/marketplace/bargain): Evaluates incoming bids against mid-market indexes within a 4% tolerance or computes algorithmic counter-proposals",
+        "The Pumpkin Cluster: Infrastructure scaling simulation gracefully degrading from high-resource cluster to single-node container upon deadline breach",
+        "Real-time bidirectional synchronization across active clients using FastAPI WebSockets & Socket.io"
+      ],
+      "icon": "fas fa-clock"
+    },
+    {
+      "id": "apex-rate-limiter",
+      "title": "Apex: Distributed Sliding-Window Rate Limiter",
+      "category": "Distributed Systems",
+      "featured": true,
+      "badge": "High Concurrency",
+      "short_description": "Distributed token-bucket & sliding-window rate limiting engine with sub-millisecond Redis clustering.",
+      "description": "Engineered a standalone distributed rate limiter for API gateways. Implements atomic Lua scripts inside Redis clusters to guard microservices against volumetric spikes and DDoS attacks.",
+      "tags": ["Python", "FastAPI", "Redis", "Lua", "Prometheus", "Docker"],
+      "github": "https://github.com",
+      "demo": "https://demo.example.com",
+      "highlights": [
+        "Sustains 45,000+ requests/sec with p99 latency under 1.8ms in load testing",
+        "Atomic Lua scripts guarantee zero race conditions across multi-node clusters",
+        "Prometheus metrics exporter with custom Grafana dashboards for live traffic observability"
+      ],
+      "icon": "fas fa-tachometer-alt"
+    },
+    {
+      "id": "chronosync-streamer",
+      "title": "ChronoSync: Distributed Real-Time WebSocket Broker",
+      "category": "Real-Time & Ephemeral",
+      "featured": true,
+      "badge": "Real-Time Architecture",
+      "short_description": "Horizontal WebSocket pub/sub fabric synchronizing live state across thousands of concurrent clients.",
+      "description": "Built an event-driven pub/sub broker using Python AsyncIO, Redis Streams, and WebSockets. Dispatches low-latency push notifications and live transactional state updates with guaranteed delivery order.",
+      "tags": ["Python", "FastAPI", "WebSockets", "Redis Streams", "PostgreSQL"],
+      "github": "https://github.com",
+      "demo": "https://demo.example.com",
+      "highlights": [
+        "Sub-10ms broadcast latency across 20,000 active concurrent WebSocket connections",
+        "Heartbeat health monitoring and auto-reconnecting client reconnect logic",
+        "Integrated transactional PostgreSQL audit log for persistent message verification"
+      ],
+      "icon": "fas fa-network-wired"
+    },
+    {
+      "id": "crypto-sentinel",
+      "title": "Sentinel: Real-time Orderbook & Event Pipeline",
+      "category": "Distributed Systems",
+      "featured": false,
+      "badge": "Streaming",
+      "short_description": "Asynchronous WebSocket pipeline streaming financial orderbook depth data into timeseries databases.",
+      "description": "Event-driven system consuming level-2 market depth feeds across major crypto exchanges. Normalizes high-throughput trade feeds and calculates real-time volatility indices.",
+      "tags": ["Python", "WebSockets", "TimescaleDB", "AIOKafka", "Docker"],
+      "github": "https://github.com",
+      "demo": "https://demo.example.com",
+      "highlights": [
+        "Ingests 50,000+ ticks/sec with zero memory leaks",
+        "Fault-tolerant auto-reconnect WebSocket connection pool",
+        "Automatic anomaly alerts sent via Webhook and Telegram bot"
+      ],
+      "icon": "fas fa-chart-line"
+    },
+    {
+      "id": "py-static-generator",
+      "title": "PyForge: Zero-Dependency Static Generator",
+      "category": "Full Stack",
+      "featured": false,
+      "badge": "Open Source",
+      "short_description": "Lightweight, blazing-fast static site builder powered exclusively by the Python Standard Library.",
+      "description": "Created a developer-first static site generator with zero external pip dependencies. Includes a custom template parser, live preview server, and GitHub Pages deployment workflow.",
+      "tags": ["Python", "Template Engine", "CLI", "Zero-Dependency", "HTML/CSS"],
+      "github": "https://github.com",
+      "demo": "https://demo.example.com",
+      "highlights": [
+        "Zero pip dependencies required — runs out-of-the-box on standard Python 3",
+        "Compiles complex responsive sites in under 10 milliseconds",
+        "Built-in file watching and live-reload HTTP server"
+      ],
+      "icon": "fas fa-bolt"
+    },
+    {
+      "id": "autoworkflow-cli",
+      "title": "CloudSync CLI: Multi-Cloud Backup Automation",
+      "category": "Full Stack",
+      "featured": false,
+      "badge": "Productivity",
+      "short_description": "Intelligent command-line tool for differential encrypted backups across AWS S3 and local storage.",
+      "description": "A cross-platform CLI tool built with Python's Argparse and Cryptography. Detects modified binary chunks to perform fast incremental uploads with client-side AES-GCM encryption.",
+      "tags": ["Python", "CLI", "AWS S3", "Cryptography", "Multiprocessing"],
+      "github": "https://github.com",
+      "demo": "https://demo.example.com",
+      "highlights": [
+        "Chunk-level deduplication reduces upload bandwidth by 65%",
+        "Multiprocessing worker pool maximizes network throughput",
+        "Automated cron-ready scheduling and error alerting"
+      ],
+      "icon": "fas fa-terminal"
+    }
+  ]
+}

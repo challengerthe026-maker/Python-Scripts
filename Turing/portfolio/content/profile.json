@@ -1,0 +1,38 @@
+{
+  "name": "Suhani Rai",
+  "first_name": "Suhani",
+  "title": "Full-Stack & Distributed Systems Engineer",
+  "status_badge": "Available for high-scale backend & full-stack engineering roles",
+  "typing_phrases": [
+    "Full-Stack & Distributed Systems Engineer",
+    "FastAPI & Real-time WebSockets Architect",
+    "Redis Cluster & Ephemeral State Specialist",
+    "Next.js, TypeScript & PostgreSQL Developer"
+  ],
+  "location": "Bengaluru / San Francisco (Open to Remote)",
+  "email": "suhani.rai.dev@example.com",
+  "github": "https://github.com",
+  "linkedin": "https://linkedin.com",
+  "resume_url": "static/resume.pdf",
+  "bio_p1": "I am a full-stack and distributed systems engineer specializing in high-concurrency microservices, real-time WebSocket communication, and resilient transactional architectures. I specialize in designing platforms that enforce strict ephemeral session guarantees, dynamic algorithmic pricing, and elastic scaling under traffic spikes.",
+  "bio_p2": "From building production-engineered distributed architectures like GlassSlipper.js to orchestrating atomic rollbacks across Redis Clusters and PostgreSQL, I turn complex structural constraints into clean, high-throughput software.",
+  "stats": [
+    {
+      "value": "4+",
+      "label": "Years Experience"
+    },
+    {
+      "value": "20+",
+      "label": "Systems Shipped"
+    },
+    {
+      "value": "< 10ms",
+      "label": "p99 Realtime Latency"
+    },
+    {
+      "value": "99.99%",
+      "label": "Cluster Availability"
+    }
+  ],
+  "code_snippet": "class GlassSlipperEngine:\n    def __init__(self, redis_cluster, pg_pool):\n        self.redis = redis_cluster\n        self.db = pg_pool\n        self.deadline = '00:00:00Z' # Midnight\n\n    async def midnight_invalidation(self, session_id: str):\n        '''Flushes JWTs and triggers atomic DB state rollback'''\n        async with self.db.transaction():\n            await self.redis.delete(f'session:{session_id}')\n            await self.broadcast_websocket_event('SESSION_EXPIRED')\n            return {'status': 'ROLLED_BACK', 'cluster': 'Pumpkin_Single_Node'}"
+}
